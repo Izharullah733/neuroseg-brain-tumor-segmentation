@@ -6,6 +6,8 @@ Built with Python, PyTorch, NiBabel and Streamlit. NeuroSeg segments prepared
 multi-modal MRI volumes, reconstructs masks on the original image grid, measures
 tumor-region volumes, and exports reproducible research reports.
 
+Maintained by [Izhar Ullah (@izharullah733)](https://github.com/Izharullah733).
+
 ## Dashboard and example output
 
 The local Streamlit dashboard provides model selection, MRI inspection and report export.
