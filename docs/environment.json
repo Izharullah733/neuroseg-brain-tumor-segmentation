@@ -1,0 +1,14 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22621-SP0",
+  "torch": "2.6.0+cpu",
+  "numpy": "1.26.4",
+  "nibabel": "5.4.2",
+  "scipy": "1.17.1",
+  "streamlit": "1.64.0",
+  "cuda_available": false,
+  "logical_cpus": 4,
+  "physical_cpus": 2,
+  "ram_gib": 15.88,
+  "environment_mode": "venv with system-site-packages; local additions recorded separately"
+}

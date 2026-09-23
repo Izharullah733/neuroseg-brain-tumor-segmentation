@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+data/
+runs/
+*.pt
+*.pth
+*.sqlite*
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.log
+*.nii
+*.nii.gz
+*.npy
+*.npz
+*.part
+# Keep data-derived MRI figures local; publish training curves and documentation.
+docs/figures/*_BRATS_*.png
