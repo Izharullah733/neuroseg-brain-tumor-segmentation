@@ -6,7 +6,20 @@ Built with Python, PyTorch, NiBabel and Streamlit. NeuroSeg segments prepared
 multi-modal MRI volumes, reconstructs masks on the original image grid, measures
 tumor-region volumes, and exports reproducible research reports.
 
-![Training and validation curves from the balanced 2D pilot](docs/figures/balanced_2d_training.png)
+## Dashboard and example output
+
+The local Streamlit dashboard provides model selection, MRI inspection and report export.
+
+![NeuroSeg MRI research dashboard showing a completed analysis](docs/screenshots/dashboard.png)
+
+**Original MRI and predicted tumor regions:** green = edema, orange = non-enhancing
+tumor, pink = enhancing tumor. This is an illustrative slice, not a reference mask
+or a substitute for cohort-level evaluation.
+
+![Original MRI beside the model's colored segmentation overlay](docs/screenshots/segmentation-output.png)
+
+The MRI visualization derives from MSD Task01 BrainTumour (BraTS-derived data).
+See [screenshot attribution](docs/screenshots/README.md) for source and licensing.
 
 ## Pilot results
 
@@ -22,6 +35,8 @@ held-out test cases. **The test split has not been evaluated.** These are
 exploratory, single-seed results with different training stopping points, not a
 controlled causal comparison or evidence of clinical readiness. Small enhancing
 regions remain a failure case. See the [full report](docs/EXPERIMENT_RESULTS.md).
+
+![Training and validation curves from the balanced 2D pilot](docs/figures/balanced_2d_training.png)
 
 Status: working data pipeline, compact 2D/2.5D models, training/resume,
 original-grid evaluation, local Streamlit viewer and PDF/CSV/NIfTI export.
@@ -53,7 +68,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-**MRI data, trained weights, patient reports and local databases are not included
+**Raw MRI volumes, trained weights, patient reports and local databases are not included
 in this repository.** Follow the reproduction steps below to download the pilot
 from its official source and train a checkpoint before running inference.
 
@@ -155,7 +170,8 @@ Dice; reported evaluation uses reconstructed original-grid masks.
 
 Dataset source and attribution: [MSD on AWS](https://registry.opendata.aws/msd/),
 with details in the [dataset card](docs/DATASET_CARD.md). Dataset materials have
-their own CC-BY-SA 4.0 license and are not bundled here.
+their own CC-BY-SA 4.0 license. Full dataset files are not bundled here; the
+illustrative output screenshot is attributed separately above.
 
 ## Initial smoke check
 
